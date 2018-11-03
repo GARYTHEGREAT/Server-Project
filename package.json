@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
+
   "dependencies": {
     "cors": "^2.8.4",
     "dotenv": "^6.1.0",
@@ -25,5 +26,13 @@
   "bugs": {
     "url": "https://github.com/GARYTHEGREAT/Server-Project/issues"
   },
-  "homepage": "https://github.com/GARYTHEGREAT/Server-Project#readme"
+
+  "homepage": "https://github.com/GARYTHEGREAT/Server-Project#readme",
+  "dependencies": {
+    "cors": "^2.8.4",
+    "dotenv": "^6.1.0",
+    "express": "^4.16.4",
+    "superagent": "^4.0.0-beta.5"
+  }
+
 }

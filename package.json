@@ -3,19 +3,30 @@
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
+
+  "dependencies": {
+    "cors": "^2.8.4",
+    "dotenv": "^6.1.0",
+    "express": "^4.16.4",
+    "superagent": "^4.0.0-beta.5"
+  },
+  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
-  },
+    "start" : "node server.js",
+    "engines": { "node" : "8.11.3" }},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/GARYTHEGREAT/Server-Project.git"
+    
+
   },
   "author": "",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/GARYTHEGREAT/Server-Project/issues"
   },
+
   "homepage": "https://github.com/GARYTHEGREAT/Server-Project#readme",
   "dependencies": {
     "cors": "^2.8.4",
@@ -23,4 +34,5 @@
     "express": "^4.16.4",
     "superagent": "^4.0.0-beta.5"
   }
+
 }

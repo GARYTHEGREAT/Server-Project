@@ -64,7 +64,7 @@ app.listen(PORT, () => {
  
       return superagent.get(url)
       .then(res => {
-          return new Lococation(res.body.results[0].geometry.location.lat,res.body.results[0].geometry.location.lng)
+          return new Location(res.body.results[0].geometry.location.lat,res.body.results[0].geometry.location.lng)
       })
     }
 

@@ -34,7 +34,7 @@ getLocation(request.query.data)
 
 app.get('/weather', getWeather)
 
-//listen for a get request at any rout, this is a catch all, and send back an error
+//listen for a get request at any route, this is a catch all, and send back an error
 app.get('*', (request, response) =>{
     response.send('<img src="http://http.cat/500" />')
 })
@@ -60,11 +60,11 @@ app.listen(PORT, () => {
   }
 
   function getLocation(query) {
-      const url = `https://maps.googleapis.com/maps/api/geocode/json?key=${process.env.GEOCODE_API_KEY}&ADDRESS=${query}`
+      const url = `https://maps.googleapis.com/maps/api/geocode/json?key=${process.env.GEOCODE_API_KEY}&address=${query}`
  
       return superagent.get(url)
       .then(res => {
-          return new Lococation(res.body.results[0].geometry.location.lat,res.body.results[0].geometry.location.lng)
+          return new Location(res.body.results[0].geometry.location.lat,res.body.results[0].geometry.location.lng)
       })
     }
 

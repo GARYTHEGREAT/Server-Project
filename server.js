@@ -70,11 +70,11 @@ app.listen(PORT, () => {
 
     function getWeather(request, response){
         const url = `https://api.darksky.net/forecast/${process.env.WEATHER_API_KEY}/${request.query.data}`
-    }
+    
 
     superagent.get(url)
     .then(res => response.send(new Weather(res.body)))
     .catch(err => response.send(handleError(err))) 
-
+    }
     let handleError = err => ({error: err, message: 'Something Broke'})
 

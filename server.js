@@ -1,4 +1,4 @@
-'use strict'
+'use strict' 
 
 //import express from the express node module
 const express = require('express')
@@ -94,7 +94,6 @@ let Location = mongoose.model('Location', locationSchema)
 
 
 
-
 function getLocation(query) {
       const url = `https://maps.googleapis.com/maps/api/geocode/json?key=${process.env.GEOCODE_API_KEY}&ADDRESS=${query}`
  //use the findOne method to look in our Location collection to see if the key/value pair exists in our collection
@@ -105,7 +104,6 @@ return Location.findOne({address: query})
       return res
     } else{
         //if it does not exist, send a superagent request to the API and get the lat/long for the query location
-
       return superagent.get(url)
       .then(res => {
           //once a response is received instantiate a new location mocel based on our locationSchema blueprint
@@ -125,7 +123,6 @@ return Location.findOne({address: query})
 
     function getWeather(request, response) {
         const url = `https://api.darksky.net/forecast/${process.env.WEATHER_API_KEY}/${request.query.data}`
-
 
 
    return superagent.get(url)
